@@ -1,0 +1,12 @@
+extends partials/_layout.pug
+block content
+  .e-grid.e-grid-small.e-grid-stretch
+    .e-cell-12.e-cell-small
+      div(style='zoom: 2')
+        include atoms/_legend-aside.pug
+
+  pre
+    code.language-jade.
+      .e-legend<mark>.e-legend-aside</mark>
+        .e-legend__title Received
+        .e-legend__value.text-color-opened 41,428

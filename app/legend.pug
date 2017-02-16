@@ -1,0 +1,13 @@
+extends partials/_layout.pug
+block content
+  div(style='zoom: 2')
+    include atoms/_legend.pug
+
+  pre
+    code.language-jade.
+      .e-legend
+        .e-legend__title Clicked by
+        .e-legend__value.text-color-opened 25%
+          small (188,838)
+        .e-legend__description of openers (6,309)
+

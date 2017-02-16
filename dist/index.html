@@ -1,0 +1,32 @@
+<!DOCTYPE html><!--[if IE 9]>
+<html class="ie9">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]--><head><title>XP</title><link rel="stylesheet" href="https://localhost:3456/css/app.css"><link rel="stylesheet" href="prism.css"><script src="https://localhost:3456/js/webpack/app.js"></script><script src="prism.js"></script><style>iframe {
+  width: 100%;
+}</style></head><body><div class="e-fullheight e-fullheight-has_header"><header class="e-topnav e-topnav-fixed"><div class="e-topnav__container"><a class="e-topnav__logo e-topnav__logo-b2c" href="/"><e-icon icon="e-logo"></e-icon></a><input class="e-topnav__mobilemenu" id="e-topnav__mobilemenu" type="checkbox"><nav class="e-menu"><ul class="e-menu__list"><li class="e-menu__item"><span class="e-menu__name">Atoms</span><div class="e-menu__drop"><ul class="e-menu__list e-menu__list-child"><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/legend.html">Legend</a></li><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/legendaside.html">Legend (aside)</a></li><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/ring.html">Ring</a></li></ul></div></li><li class="e-menu__item"><span class="e-menu__name">Molecules</span><div class="e-menu__drop"><ul class="e-menu__list e-menu__list-child"><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/legendlist.html">Legend list</a></li><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/ringchart.html">Ringchart</a></li></ul></div></li><li class="e-menu__item"><span class="e-menu__name">Organisms</span><div class="e-menu__drop"><ul class="e-menu__list e-menu__list-child"><li class="e-menu__item e-menu__item-child"><a class="e-menu__name e-menu__name-child" href="/segmentselector.html">Segment selector</a></li></ul></div></li><li class="e-menu__item"><a class="e-menu__name" href="layout.html" fullscreen="true">Page</a></li></ul></nav></div></header><div class="e-fullheight__wrapper"><div class="e-fullheight__container"><iframe></iframe></div></div></div><script>const menuElement = document.querySelector('.e-menu');
+const iframeElement = document.querySelector('iframe');
+if (window.location.hash) {
+  const href = window.location.hash.substring(1);
+  console.log(href);
+  iframeElement.src = href;
+}
+
+menuElement.addEventListener('click', event => {
+  const href = event.target.href;
+  if (!href) {
+    return;
+  }
+
+  if (event.target.getAttribute('fullscreen') === 'true') {
+    return;
+  }
+
+  event.preventDefault();
+  iframeElement.src = href;
+
+  const parser = document.createElement('a');
+  parser.href = href;
+  window.location.hash = parser.pathname;
+});</script></body>

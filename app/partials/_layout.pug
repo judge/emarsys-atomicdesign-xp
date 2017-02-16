@@ -1,0 +1,20 @@
+//- layout.pug
+doctype html
+<!--[if IE 9]>
+<html class="ie9">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+head
+  title XP
+  link(rel='stylesheet', href='https://localhost:3456/css/app.css')
+  link(rel='stylesheet', href='prism.css')
+  script(src="https://localhost:3456/js/webpack/app.js")
+  script(src="prism.js")
+  style.
+    iframe {
+      width: 100%;
+    }
+body
+  block content

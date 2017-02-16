@@ -1,0 +1,20 @@
+extends partials/_layout.pug
+block content
+  .e-grid.e-grid-small.e-grid-stretch
+    .e-cell-6.e-cell-border_left.e-cell-small
+      div(style='zoom: 2')
+        include molecules/_ringchart.pug
+
+  pre
+    code.language-jade.
+      <mark>.e-ringchart</mark>
+        <mark>.e-ringchart__chart</mark>
+          e-ring
+            e-circle(percent='17.42', color='#6cc9b2')
+          <mark>.e-ringchart__inner</mark>
+            <mark>.text-size-body.text-color-opened CTR</mark>
+        <mark>.e-ringchart__legend</mark>
+          .e-legend
+            .e-legend__title Clicked by
+            .e-legend__value.text-color-opened 25% <small>(188,838)</small>
+            .e-legend__description of openers (6,309)

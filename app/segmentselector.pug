@@ -1,0 +1,37 @@
+extends partials/_layout.pug
+block content
+  include organisms/_segmentselector.pug
+
+  pre
+    code.language-jade.
+      <mark>.e-box.e-boxpadding
+        h2 Segment 1
+        .e-field
+          e-select
+            select.e-select
+              option All recipients
+              option Option 01
+        .e-grid.e-grid-small.e-grid-stretch
+          .e-cell-6.e-cell-small</mark>
+            .e-legend.e-legend-aside
+              .e-legend__row
+                .e-legend__title Received
+                .e-legend__value.text-color-opened 41,428
+              .e-legend__row
+                .e-legend__title Opened
+                .e-legend__value.text-color-opened 6,309
+              .e-legend__row
+                .e-legend__title Clicked
+                .e-legend__value.text-color-opened 371
+          <mark>.e-cell-6.e-cell-border_left.e-cell-small</mark>
+            .e-ringchart
+              .e-ringchart__chart
+                e-ring
+                  e-circle(percent='17.42', color='#6cc9b2')
+                .e-ringchart__inner
+                  .text-size-body.text-color-opened CTR
+              .e-ringchart__legend
+                .e-legend
+                  .e-legend__title Clicked by
+                  .e-legend__value.text-color-opened 25% <small>(188,838)</small>
+                  .e-legend__description of openers (6,309)

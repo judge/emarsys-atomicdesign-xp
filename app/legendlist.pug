@@ -1,0 +1,19 @@
+extends partials/_layout.pug
+block content
+  .e-grid.e-grid-small.e-grid-stretch
+    .e-cell-12.e-cell-small
+      div(style='zoom: 2')
+        include molecules/_legendlist.pug
+
+  pre
+    code.language-jade.
+      .e-legend.e-legend-aside
+        <mark>.e-legend__row</mark>
+          .e-legend__title Received
+          .e-legend__value.text-color-opened 41,428
+        <mark>.e-legend__row</mark>
+          .e-legend__title Opened
+          .e-legend__value.text-color-opened 6,309
+        <mark>.e-legend__row</mark>
+          .e-legend__title Clicked
+          .e-legend__value.text-color-opened 371
